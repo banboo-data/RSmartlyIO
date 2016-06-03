@@ -9,7 +9,7 @@ getSmartlyData(start, end, date = "date", accountID, accountInfo = F,
   creative = NULL, facebook = NULL, apiToken, metrics)
 }
 \arguments{
-\item{start}{Begining of date range. Format: "2016-05-01"}
+\item{start}{Beginning of date range. Format: "2016-05-01"}
 
 \item{end}{End of date range. Format: "2016-05-02"}
 
@@ -21,13 +21,13 @@ getSmartlyData(start, end, date = "date", accountID, accountInfo = F,
 
 \item{campaignStructure}{Campaign Information Selection. Vector with multiple arguments out of: campaign_name, campaign_fb_id, adgroup_name, adgroup_fb_id, name, id, fb_objective, campaign_start_date}
 
-\item{billing}{Billing Information Selection. Vector with multiple argumets out of: bid.optimization_goal, bid.billing_event}
+\item{billing}{Billing Information Selection. Vector with multiple arguments out of: bid.optimization_goal, bid.billing_event}
 
-\item{targeting}{Targeting Settings of Campaigns. Vector with multiple argumets out of: targeting.geo_locations.countries, targeting.geo_locations.cities, targeting.genders, targeting.age_min, targeting.age_max, targeting.interests, targeting.behaviors, targeting.custom_audiences, targeting.excluded_custom_audiences, targeting.connections, targeting.user_os, targeting.user_device, targeting.page_types}
+\item{targeting}{Targeting Settings of Campaigns. Vector with multiple arguments out of: targeting.geo_locations.countries, targeting.geo_locations.cities, targeting.genders, targeting.age_min, targeting.age_max, targeting.interests, targeting.behaviors, targeting.custom_audiences, targeting.excluded_custom_audiences, targeting.connections, targeting.user_os, targeting.user_device, targeting.page_types}
 
-\item{creative}{Creative/Ad Characteristics. Vector with multiple argumets out of: creative_meta.call_to_action, creative_meta, creative_meta.type, creative_meta.post_type, creative_meta.name, creative_meta.picture, creative_meta.post_fb_id, creative_meta.post_fb_link, creative_meta.text, creative_meta.title, creative_meta.link, creative_meta.url_tags}
+\item{creative}{Creative/Ad Characteristics. Vector with multiple arguments out of: creative_meta.call_to_action, creative_meta, creative_meta.type, creative_meta.post_type, creative_meta.name, creative_meta.picture, creative_meta.post_fb_id, creative_meta.post_fb_link, creative_meta.text, creative_meta.title, creative_meta.link, creative_meta.url_tags}
 
-\item{facebook}{Facebook Settings. Vector with multiple argumets out of: age, country, gender, age_gender, placement, cross_device, region, hourly_stats_aggregated_by_advertiser_time_zone, hourly_stats_aggregated_by_audience_time_zone}
+\item{facebook}{Facebook Settings. One argument out of: age, country, gender, age_gender, placement, cross_device, region, hourly_stats_aggregated_by_advertiser_time_zone, hourly_stats_aggregated_by_audience_time_zone}
 
 \item{apiToken}{API Token. Character. Usually the API token is provided within the Smartly.io web interface or by the account manager.}
 

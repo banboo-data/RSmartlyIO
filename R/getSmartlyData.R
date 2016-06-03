@@ -3,16 +3,16 @@
 #' @description getSmartlyData posts the query and downloads the data.
 #' The data are retrieved from the API as a dataframe.
 #'
-#' @param start Begining of date range. Format: "2016-05-01"
+#' @param start Beginning of date range. Format: "2016-05-01"
 #' @param end End of date range. Format: "2016-05-02"
 #' @param date Date aggregation level. One out of date, year, month, weekofyear, weekday
 #' @param accountID Smartly.io Account ID. Input as character: "1234abcdefg5678"
 #' @param accountInfo Account Information. TRUE/FALSE
 #' @param campaignStructure Campaign Information Selection. Vector with multiple arguments out of: campaign_name, campaign_fb_id, adgroup_name, adgroup_fb_id, name, id, fb_objective, campaign_start_date
-#' @param billing Billing Information Selection. Vector with multiple argumets out of: bid.optimization_goal, bid.billing_event
-#' @param targeting Targeting Settings of Campaigns. Vector with multiple argumets out of: targeting.geo_locations.countries, targeting.geo_locations.cities, targeting.genders, targeting.age_min, targeting.age_max, targeting.interests, targeting.behaviors, targeting.custom_audiences, targeting.excluded_custom_audiences, targeting.connections, targeting.user_os, targeting.user_device, targeting.page_types
-#' @param creative Creative/Ad Characteristics. Vector with multiple argumets out of: creative_meta.call_to_action, creative_meta, creative_meta.type, creative_meta.post_type, creative_meta.name, creative_meta.picture, creative_meta.post_fb_id, creative_meta.post_fb_link, creative_meta.text, creative_meta.title, creative_meta.link, creative_meta.url_tags
-#' @param facebook Facebook Settings. Vector with multiple argumets out of: age, country, gender, age_gender, placement, cross_device, region, hourly_stats_aggregated_by_advertiser_time_zone, hourly_stats_aggregated_by_audience_time_zone
+#' @param billing Billing Information Selection. Vector with multiple arguments out of: bid.optimization_goal, bid.billing_event
+#' @param targeting Targeting Settings of Campaigns. Vector with multiple arguments out of: targeting.geo_locations.countries, targeting.geo_locations.cities, targeting.genders, targeting.age_min, targeting.age_max, targeting.interests, targeting.behaviors, targeting.custom_audiences, targeting.excluded_custom_audiences, targeting.connections, targeting.user_os, targeting.user_device, targeting.page_types
+#' @param creative Creative/Ad Characteristics. Vector with multiple arguments out of: creative_meta.call_to_action, creative_meta, creative_meta.type, creative_meta.post_type, creative_meta.name, creative_meta.picture, creative_meta.post_fb_id, creative_meta.post_fb_link, creative_meta.text, creative_meta.title, creative_meta.link, creative_meta.url_tags
+#' @param facebook Facebook Settings. One argument out of: age, country, gender, age_gender, placement, cross_device, region, hourly_stats_aggregated_by_advertiser_time_zone, hourly_stats_aggregated_by_audience_time_zone
 #' @param apiToken API Token. Character. Usually the API token is provided within the Smartly.io web interface or by the account manager.
 #' @param metrics Metrics. Note: There are more metrics available. See the reporting section in the smartly.io interface. Vector with multiple argumets out of: impressions, ctr, cpm, cpc, spent, conversions, inline_link_clicks, clicks, cpa, reach, frequency, roi, revenue, social_impressions, social_clicks, website_clicks, newsfeed_clicks, deeplink_clicks, app_store_clicks, call_to_action_clicks, inline_post_engagement
 #' @export
