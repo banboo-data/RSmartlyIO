@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Query Data - RSmartlyIO</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Query Data";
+    var mkdocs_page_input_path = "getdata.md";
+    var mkdocs_page_url = "/getdata/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> RSmartlyIO</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../install/">Installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../requirements/">Requirements</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../examples/">Quick Start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Query Data</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#loading-data">Loading data</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#build-a-statement">Build a statement</a></li>
+                
+                    <li><a class="toctree-l4" href="#date">Date</a></li>
+                
+                    <li><a class="toctree-l4" href="#account-information">Account Information</a></li>
+                
+                    <li><a class="toctree-l4" href="#campaign-structure">Campaign Structure</a></li>
+                
+                    <li><a class="toctree-l4" href="#billing-information">Billing Information</a></li>
+                
+                    <li><a class="toctree-l4" href="#campaign-targeting-information">Campaign Targeting Information</a></li>
+                
+                    <li><a class="toctree-l4" href="#creativead-characteristics">Creative/Ad Characteristics</a></li>
+                
+                    <li><a class="toctree-l4" href="#facebook-settings">Facebook Settings</a></li>
+                
+                    <li><a class="toctree-l4" href="#metrics">Metrics</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../bug/">Bug Reporting</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">RSmartlyIO</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Query Data</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h3 id="loading-data">Loading data</h3>
+<p>The package implements following features:</p>
+<ul>
+<li>Authentication</li>
+<li>Post the statement</li>
+<li>Download the data</li>
+<li>Return data as dataframe</li>
+</ul>
+<p>These tasks are all handled by one function <code>getSmartlyData()</code>. That´s all you need.</p>
+<h3 id="build-a-statement">Build a statement</h3>
+<p>There are different segments that allow you to query the API.</p>
+<h4 id="date">Date</h4>
+<p><strong><em>start</em></strong> - Beginning of date range. Format: "2016-05-01"<br />
+<strong><em>end</em></strong> - End of date range. Format: "2016-05-02"<br />
+<strong><em>date</em></strong> - Date aggregation level. One out of date, year, month, weekofyear, weekday</p>
+<h4 id="account-information">Account Information</h4>
+<p>Provides information about page name and account.</p>
+<p><strong><em>accountInfo</em></strong> - Account Information. TRUE/FALSE</p>
+<h4 id="campaign-structure">Campaign Structure</h4>
+<p><strong><em>campaignStructure</em></strong> - Campaign Information Selection. Vector with multiple arguments out of: campaign_name, campaign_fb_id, adgroup_name, adgroup_fb_id, name, id, fb_objective, campaign_start_date</p>
+<h4 id="billing-information">Billing Information</h4>
+<p><strong><em>billing</em></strong> - Billing Information Selection. Vector with multiple arguments out of: bid.optimization_goal, bid.billing_event</p>
+<h4 id="campaign-targeting-information">Campaign Targeting Information</h4>
+<p><strong><em>targeting</em></strong> - Targeting Settings of Campaigns. Vector with multiple arguments out of: targeting.geo_locations.countries, targeting.geo_locations.cities, targeting.genders, targeting.age_min, targeting.age_max, targeting.interests, targeting.behaviors, targeting.custom_audiences, targeting.excluded_custom_audiences, targeting.connections, targeting.user_os, targeting.user_device, targeting.page_types</p>
+<h4 id="creativead-characteristics">Creative/Ad Characteristics</h4>
+<p><strong><em>creative</em></strong> - Creative/Ad Characteristics. Vector with multiple arguments out of: creative_meta.call_to_action, creative_meta, creative_meta.type, creative_meta.post_type, creative_meta.name, creative_meta.picture, creative_meta.post_fb_id, creative_meta.post_fb_link, creative_meta.text, creative_meta.title, creative_meta.link, creative_meta.url_tags</p>
+<h4 id="facebook-settings">Facebook Settings</h4>
+<p><strong><em>facebook</em></strong> - Facebook Settings. <strong><em>One argument only</em></strong> out of: age, country, gender, age_gender, placement, cross_device, region, hourly_stats_aggregated_by_advertiser_time_zone, hourly_stats_aggregated_by_audience_time_zone</p>
+<h4 id="metrics">Metrics</h4>
+<p><strong><em>metrics</em></strong> - Metrics. Note: There are more metrics available. See the reporting section in the smartly.io interface. Vector with multiple arguments out of: impressions, ctr, cpm, cpc, spent, conversions, inline_link_clicks, clicks, cpa, reach, frequency, roi, revenue, social_impressions, social_clicks, website_clicks, newsfeed_clicks, deeplink_clicks, app_store_clicks, call_to_action_clicks, inline_post_engagement</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../bug/" class="btn btn-neutral float-right" title="Bug Reporting">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../examples/" class="btn btn-neutral" title="Quick Start"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../examples/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../bug/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "RSmartlyIO User Manual\n\n\nLoading Facebook and Instagram Advertising Data from Smartly.io\n\n\nWelcome to the official documentation of the R Smartly.io package for Facebook and Instagram advertising data.  \n\n\nRSmartlyIO enables users of the R Language for Statistical Computing to directly access their \nsmartly.io account\n in order to consume and analyze information provided by the smartly.io API.\n\n\nGeneral\n\n\nRSmartlyIO is a license cost free open source project by \n@jburkhardt\n and \n@mbannert\n.\n\n\nRSmartlyIO loads Facebook and Instagram advertising data from the smartly.io API directly into R. Smartly.io is an online advertising service that enables advertisers to display advertising copy on social media networks. The package offers an interface to query the Smartly.io API and loads data directly into R for further data processing and data analysis.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#rsmartlyio-user-manual", 
+            "text": "Loading Facebook and Instagram Advertising Data from Smartly.io  Welcome to the official documentation of the R Smartly.io package for Facebook and Instagram advertising data.    RSmartlyIO enables users of the R Language for Statistical Computing to directly access their  smartly.io account  in order to consume and analyze information provided by the smartly.io API.", 
+            "title": "RSmartlyIO User Manual"
+        }, 
+        {
+            "location": "/#general", 
+            "text": "RSmartlyIO is a license cost free open source project by  @jburkhardt  and  @mbannert .  RSmartlyIO loads Facebook and Instagram advertising data from the smartly.io API directly into R. Smartly.io is an online advertising service that enables advertisers to display advertising copy on social media networks. The package offers an interface to query the Smartly.io API and loads data directly into R for further data processing and data analysis.", 
+            "title": "General"
+        }, 
+        {
+            "location": "/install/", 
+            "text": "Installation\n\n\nThe package can be installed from \ngithub\n.  \n\n\nrequire(devtools)\ninstall_github('rstats-lab/RSmartlyIO')\n\n\n\n\nSource: \nhttps://github.com/rstats-lab/RSmartlyIO", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/install/#installation", 
+            "text": "The package can be installed from  github .    require(devtools)\ninstall_github('rstats-lab/RSmartlyIO')  Source:  https://github.com/rstats-lab/RSmartlyIO", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/requirements/", 
+            "text": "Requirements\n\n\nIn order to access the smartly.io API you have to meet the following requirements:  \n\n\n\n\nsmartly.io account\n\n\nValid smartly.io account Id\n\n\nValid API token\n\n\n\n\nMissing one of the above mentioned items you cannot access the smartly.io API. The API token usually will be provided by your smartly.io account manager.", 
+            "title": "Requirements"
+        }, 
+        {
+            "location": "/requirements/#requirements", 
+            "text": "In order to access the smartly.io API you have to meet the following requirements:     smartly.io account  Valid smartly.io account Id  Valid API token   Missing one of the above mentioned items you cannot access the smartly.io API. The API token usually will be provided by your smartly.io account manager.", 
+            "title": "Requirements"
+        }, 
+        {
+            "location": "/examples/", 
+            "text": "Installation\n\n\nrequire(devtools)\ninstall_github('rstats-lab/RSmartlyIO')\n\n\n\n\nQuery smartly.io API and load data as dataframe\n\n\ndata \n- getSmartlyData(start = \n2016-03-01\n,\n                       end = \n2016-03-02\n,\n                       date = \ndate\n,\n                       accountID=\n*****************\n,\n                       accountInfo = F,\n                       campaignStructure = c(\ncampaign_name\n, \ncampaign_fb_id\n),\n                       billing = c(\nbid.optimization_goal\n, \nbid.billing_event\n),\n                       targeting = c(\ntargeting.geo_locations.countries\n),\n                       creative = c(\ncreative_meta.call_to_action\n),\n                       #facebook = \nage\n,\n                       apiToken=\n************************************\n,\n                       metrics = c(\nimpressions\n,\nclicks\n))", 
+            "title": "Quick Start"
+        }, 
+        {
+            "location": "/examples/#installation", 
+            "text": "require(devtools)\ninstall_github('rstats-lab/RSmartlyIO')", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/examples/#query-smartlyio-api-and-load-data-as-dataframe", 
+            "text": "data  - getSmartlyData(start =  2016-03-01 ,\n                       end =  2016-03-02 ,\n                       date =  date ,\n                       accountID= ***************** ,\n                       accountInfo = F,\n                       campaignStructure = c( campaign_name ,  campaign_fb_id ),\n                       billing = c( bid.optimization_goal ,  bid.billing_event ),\n                       targeting = c( targeting.geo_locations.countries ),\n                       creative = c( creative_meta.call_to_action ),\n                       #facebook =  age ,\n                       apiToken= ************************************ ,\n                       metrics = c( impressions , clicks ))", 
+            "title": "Query smartly.io API and load data as dataframe"
+        }, 
+        {
+            "location": "/getdata/", 
+            "text": "Loading data\n\n\nThe package implements following features:\n\n\n\n\nAuthentication\n\n\nPost the statement\n\n\nDownload the data\n\n\nReturn data as dataframe\n\n\n\n\nThese tasks are all handled by one function \ngetSmartlyData()\n. That\u00b4s all you need.\n\n\nBuild a statement\n\n\nThere are different segments that allow you to query the API.\n\n\nDate\n\n\nstart\n - Beginning of date range. Format: \"2016-05-01\"\n\n\nend\n - End of date range. Format: \"2016-05-02\"\n\n\ndate\n - Date aggregation level. One out of date, year, month, weekofyear, weekday\n\n\nAccount Information\n\n\nProvides information about page name and account.\n\n\naccountInfo\n - Account Information. TRUE/FALSE\n\n\nCampaign Structure\n\n\ncampaignStructure\n - Campaign Information Selection. Vector with multiple arguments out of: campaign_name, campaign_fb_id, adgroup_name, adgroup_fb_id, name, id, fb_objective, campaign_start_date\n\n\nBilling Information\n\n\nbilling\n - Billing Information Selection. Vector with multiple arguments out of: bid.optimization_goal, bid.billing_event\n\n\nCampaign Targeting Information\n\n\ntargeting\n - Targeting Settings of Campaigns. Vector with multiple arguments out of: targeting.geo_locations.countries, targeting.geo_locations.cities, targeting.genders, targeting.age_min, targeting.age_max, targeting.interests, targeting.behaviors, targeting.custom_audiences, targeting.excluded_custom_audiences, targeting.connections, targeting.user_os, targeting.user_device, targeting.page_types\n\n\nCreative/Ad Characteristics\n\n\ncreative\n - Creative/Ad Characteristics. Vector with multiple arguments out of: creative_meta.call_to_action, creative_meta, creative_meta.type, creative_meta.post_type, creative_meta.name, creative_meta.picture, creative_meta.post_fb_id, creative_meta.post_fb_link, creative_meta.text, creative_meta.title, creative_meta.link, creative_meta.url_tags\n\n\nFacebook Settings\n\n\nfacebook\n - Facebook Settings. \nOne argument only\n out of: age, country, gender, age_gender, placement, cross_device, region, hourly_stats_aggregated_by_advertiser_time_zone, hourly_stats_aggregated_by_audience_time_zone\n\n\nMetrics\n\n\nmetrics\n - Metrics. Note: There are more metrics available. See the reporting section in the smartly.io interface. Vector with multiple arguments out of: impressions, ctr, cpm, cpc, spent, conversions, inline_link_clicks, clicks, cpa, reach, frequency, roi, revenue, social_impressions, social_clicks, website_clicks, newsfeed_clicks, deeplink_clicks, app_store_clicks, call_to_action_clicks, inline_post_engagement", 
+            "title": "Query Data"
+        }, 
+        {
+            "location": "/getdata/#loading-data", 
+            "text": "The package implements following features:   Authentication  Post the statement  Download the data  Return data as dataframe   These tasks are all handled by one function  getSmartlyData() . That\u00b4s all you need.", 
+            "title": "Loading data"
+        }, 
+        {
+            "location": "/getdata/#build-a-statement", 
+            "text": "There are different segments that allow you to query the API.", 
+            "title": "Build a statement"
+        }, 
+        {
+            "location": "/getdata/#date", 
+            "text": "start  - Beginning of date range. Format: \"2016-05-01\"  end  - End of date range. Format: \"2016-05-02\"  date  - Date aggregation level. One out of date, year, month, weekofyear, weekday", 
+            "title": "Date"
+        }, 
+        {
+            "location": "/getdata/#account-information", 
+            "text": "Provides information about page name and account.  accountInfo  - Account Information. TRUE/FALSE", 
+            "title": "Account Information"
+        }, 
+        {
+            "location": "/getdata/#campaign-structure", 
+            "text": "campaignStructure  - Campaign Information Selection. Vector with multiple arguments out of: campaign_name, campaign_fb_id, adgroup_name, adgroup_fb_id, name, id, fb_objective, campaign_start_date", 
+            "title": "Campaign Structure"
+        }, 
+        {
+            "location": "/getdata/#billing-information", 
+            "text": "billing  - Billing Information Selection. Vector with multiple arguments out of: bid.optimization_goal, bid.billing_event", 
+            "title": "Billing Information"
+        }, 
+        {
+            "location": "/getdata/#campaign-targeting-information", 
+            "text": "targeting  - Targeting Settings of Campaigns. Vector with multiple arguments out of: targeting.geo_locations.countries, targeting.geo_locations.cities, targeting.genders, targeting.age_min, targeting.age_max, targeting.interests, targeting.behaviors, targeting.custom_audiences, targeting.excluded_custom_audiences, targeting.connections, targeting.user_os, targeting.user_device, targeting.page_types", 
+            "title": "Campaign Targeting Information"
+        }, 
+        {
+            "location": "/getdata/#creativead-characteristics", 
+            "text": "creative  - Creative/Ad Characteristics. Vector with multiple arguments out of: creative_meta.call_to_action, creative_meta, creative_meta.type, creative_meta.post_type, creative_meta.name, creative_meta.picture, creative_meta.post_fb_id, creative_meta.post_fb_link, creative_meta.text, creative_meta.title, creative_meta.link, creative_meta.url_tags", 
+            "title": "Creative/Ad Characteristics"
+        }, 
+        {
+            "location": "/getdata/#facebook-settings", 
+            "text": "facebook  - Facebook Settings.  One argument only  out of: age, country, gender, age_gender, placement, cross_device, region, hourly_stats_aggregated_by_advertiser_time_zone, hourly_stats_aggregated_by_audience_time_zone", 
+            "title": "Facebook Settings"
+        }, 
+        {
+            "location": "/getdata/#metrics", 
+            "text": "metrics  - Metrics. Note: There are more metrics available. See the reporting section in the smartly.io interface. Vector with multiple arguments out of: impressions, ctr, cpm, cpc, spent, conversions, inline_link_clicks, clicks, cpa, reach, frequency, roi, revenue, social_impressions, social_clicks, website_clicks, newsfeed_clicks, deeplink_clicks, app_store_clicks, call_to_action_clicks, inline_post_engagement", 
+            "title": "Metrics"
+        }, 
+        {
+            "location": "/bug/", 
+            "text": "Discovered any bugs?\n\n\n\n\n\n\nPlease make sure you run with the latest RSmartlyIO version before you report any issues.  \n\n\n\n\n\n\nDo you have a valid API token?\n\n\n\n\n\n\nIf you are still in trouble, please report the issue on \nhttps://github.com/rstats-lab/RSmartlyIO/issues\n\n\n\n\n\n\nWe appreciate if you provide the following information along with the issue:\n\n\n\n\nOperating System\n\n\nR Version\n\n\nRSmartlyIO version\n\n\nthe R code which leads to the error\n\n\nthe error message, prompt output\n\n\ncode as text rather than screenshots\n\n\n\n\nWe will try to get back to you as soon as possible!", 
+            "title": "Bug Reporting"
+        }, 
+        {
+            "location": "/bug/#discovered-any-bugs", 
+            "text": "Please make sure you run with the latest RSmartlyIO version before you report any issues.      Do you have a valid API token?    If you are still in trouble, please report the issue on  https://github.com/rstats-lab/RSmartlyIO/issues    We appreciate if you provide the following information along with the issue:   Operating System  R Version  RSmartlyIO version  the R code which leads to the error  the error message, prompt output  code as text rather than screenshots   We will try to get back to you as soon as possible!", 
+            "title": "Discovered any bugs?"
+        }
+    ]
+}
