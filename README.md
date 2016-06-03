@@ -28,3 +28,7 @@ data <- getSmartlyData(start = "2016-03-01",
                        apiToken="************************************",
                        metrics = c("impressions","clicks"))
 ```
+
+### Documentation
+
+The official package documentation can be found here: http://rstats-lab.github.io/RSmartlyIO/
