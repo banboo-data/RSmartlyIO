@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "RSmartlyIO User Manual\n\n\nLoading Facebook and Instagram Advertising Data from Smartly.io\n\n\nWelcome to the official documentation of the R Smartly.io package for Facebook and Instagram advertising data.  \n\n\nRSmartlyIO enables users of the R Language for Statistical Computing to directly access their \nsmartly.io account\n in order to consume and analyze information provided by the smartly.io API.\n\n\nGeneral\n\n\nRSmartlyIO is a license cost free open source project by \n@jburkhardt\n and \n@mbannert\n.\n\n\nRSmartlyIO loads Facebook and Instagram advertising data from the smartly.io API directly into R. Smartly.io is an online advertising service that enables advertisers to display advertising copy on social media networks. The package offers an interface to query the Smartly.io API and loads data directly into R for further data processing and data analysis.", 
+            "text": "RSmartlyIO User Manual\n\n\nLoading Facebook and Instagram Advertising Data from Smartly.io\n\n\nWelcome to the official documentation of the R Smartly.io package for Facebook and Instagram advertising data.  \n\n\nRSmartlyIO enables users of the R Language for Statistical Computing to directly access their \nsmartly.io account\n in order to consume and analyze information provided by the smartly.io API.\n\n\nGeneral\n\n\nRSmartlyIO is a license cost free open source project by \n@jburkhardt\n and \n@mbannert\n.\n\n\nRSmartlyIO loads Facebook and Instagram advertising data from the smartly.io API directly into R. Smartly.io is an online advertising service that enables advertisers to display ads on social media networks. The package offers an interface to query the Smartly.io API and loads data directly into R for further data processing and data analysis.", 
             "title": "Home"
         }, 
         {
@@ -12,7 +12,7 @@
         }, 
         {
             "location": "/#general", 
-            "text": "RSmartlyIO is a license cost free open source project by  @jburkhardt  and  @mbannert .  RSmartlyIO loads Facebook and Instagram advertising data from the smartly.io API directly into R. Smartly.io is an online advertising service that enables advertisers to display advertising copy on social media networks. The package offers an interface to query the Smartly.io API and loads data directly into R for further data processing and data analysis.", 
+            "text": "RSmartlyIO is a license cost free open source project by  @jburkhardt  and  @mbannert .  RSmartlyIO loads Facebook and Instagram advertising data from the smartly.io API directly into R. Smartly.io is an online advertising service that enables advertisers to display ads on social media networks. The package offers an interface to query the Smartly.io API and loads data directly into R for further data processing and data analysis.", 
             "title": "General"
         }, 
         {
@@ -107,12 +107,12 @@
         }, 
         {
             "location": "/bug/", 
-            "text": "Discovered any bugs?\n\n\n\n\n\n\nPlease make sure you run with the latest RSmartlyIO version before you report any issues.  \n\n\n\n\n\n\nDo you have a valid API token?\n\n\n\n\n\n\nIf you are still in trouble, please report the issue on \nhttps://github.com/rstats-lab/RSmartlyIO/issues\n\n\n\n\n\n\nWe appreciate if you provide the following information along with the issue:\n\n\n\n\nOperating System\n\n\nR Version\n\n\nRSmartlyIO version\n\n\nthe R code which leads to the error\n\n\nthe error message, prompt output\n\n\ncode as text rather than screenshots\n\n\n\n\nWe will try to get back to you as soon as possible!", 
+            "text": "Discovered any bugs?\n\n\n\n\n\n\nPlease make sure you run with the latest RSmartlyIO version before you report any issues.  \n\n\n\n\n\n\nDo you have a valid API token?\n\n\n\n\n\n\nIf you are still in trouble, please report the issue on \nhttps://github.com/rstats-lab/RSmartlyIO/issues\n\n\n\n\n\n\nWe appreciate if you provide the following information along with the issue:\n\n\n\n\nOperating System\n\n\nR Version\n\n\nRSmartlyIO version\n\n\nthe R code which leads to the error\n\n\nthe error message, prompt output\n\n\ncode as text rather than screenshots\n\n\n\n\nWe will try to get back to you as soon as possible!\n\n\nAny other remarks, comments on the package or the documentation?\n\nWe appreciate any help in improving the package or documentation and look forward to your messages.", 
             "title": "Bug Reporting"
         }, 
         {
             "location": "/bug/#discovered-any-bugs", 
-            "text": "Please make sure you run with the latest RSmartlyIO version before you report any issues.      Do you have a valid API token?    If you are still in trouble, please report the issue on  https://github.com/rstats-lab/RSmartlyIO/issues    We appreciate if you provide the following information along with the issue:   Operating System  R Version  RSmartlyIO version  the R code which leads to the error  the error message, prompt output  code as text rather than screenshots   We will try to get back to you as soon as possible!", 
+            "text": "Please make sure you run with the latest RSmartlyIO version before you report any issues.      Do you have a valid API token?    If you are still in trouble, please report the issue on  https://github.com/rstats-lab/RSmartlyIO/issues    We appreciate if you provide the following information along with the issue:   Operating System  R Version  RSmartlyIO version  the R code which leads to the error  the error message, prompt output  code as text rather than screenshots   We will try to get back to you as soon as possible!  Any other remarks, comments on the package or the documentation? \nWe appreciate any help in improving the package or documentation and look forward to your messages.", 
             "title": "Discovered any bugs?"
         }
     ]
