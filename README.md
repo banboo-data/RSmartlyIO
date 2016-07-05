@@ -3,7 +3,7 @@
 ### Loading Facebook and Instagram Advertising Data from Smartly.io into R
 
 R Package which aims at loading **Facebook** and **Instagram** advertising data from [Smartly.io](https://app.smartly.io) into R.  
-Smartly.io is an online advertising service that enables advertisers to display advertising copy on social media networks.  
+Smartly.io is an online advertising service that enables advertisers to display commercial ads on social media networks.  
 The package offers an interface to query the Smartly.io API and loads data directly into R for further data processing and data analysis.
 
 ### Installation
