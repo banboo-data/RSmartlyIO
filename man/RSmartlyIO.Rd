@@ -2,7 +2,7 @@
 \alias{RSmartlyIO}
 \title{Loading Facebook and Instagram Advertising Data from Smartly.io}
 \description{Aims at loading \strong{Facebook} and \strong{Instagram} advertising data from \href{https://app.smartly.io}{Smartly.io} into R.
-            Smartly.io is an online advertising service that enables advertisers to display advertising copy on social media networks.
+            Smartly.io is an online advertising service that enables advertisers to display commercial ads on social media networks.
             The package offers an interface to query the Smartly.io API and loads data directly into R for further data processing and data analysis.}
 
 \examples{
