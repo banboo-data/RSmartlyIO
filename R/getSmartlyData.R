@@ -80,6 +80,6 @@ getSmartlyData <- function(start,
                      "&format=csv&csv_col_separator=;&csv_dec_separator=,&api_token=",
                      apiToken, sep="")
         data <- RCurl::getURL(url)
-        data <- read.csv2(textConnection(data),sep=";",header=T)[-1,]
+        data <- utils::read.csv2(textConnection(data),sep=";",header=T)[-1,]
         data
 }
