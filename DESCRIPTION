@@ -6,7 +6,7 @@ Description: Aims at loading Facebook and Instagram advertising data from
     advertisers to display commercial ads on social media networks. The package
     offers an interface to query the Smartly.io API and loads data directly into R
     for further data processing and data analysis.
-Version: 0.1.0
+Version: 0.1.1
 Author: Johannes Burkhardt <johannes.burkhardt@gmail.com>
 Maintainer: Johannes Burkhardt <johannes.burkhardt@gmail.com>
 Depends:
@@ -16,5 +16,5 @@ Imports:
 License: MIT + file LICENSE
 URL: https://github.com/rstats-lab/RSmartlyIO, https://app.smartly.io
 BugReports: https://github.com/rstats-lab/RSmartlyIO/issues
-Date: 2016-05-25
+Date: 2017-01-09
 RoxygenNote: 5.0.1
