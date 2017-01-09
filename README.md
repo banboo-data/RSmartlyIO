@@ -1,6 +1,6 @@
 ## RSmartlyIO
 
-RSmartlyIO is a license cost free open source project by [@jburkhardt](https://github.com/jburkhardt).
+RSmartlyIO is a license cost free open source project by [@jburkhardt](https://github.com/jburkhardt) and [@mbannert](https://github.com/mbannert).
 
 ### Loading Facebook and Instagram Advertising Data from Smartly.io into R
 
