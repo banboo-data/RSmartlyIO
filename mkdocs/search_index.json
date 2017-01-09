@@ -17,13 +17,23 @@
         }, 
         {
             "location": "/install/", 
-            "text": "Installation\n\n\nThe package can be installed from \ngithub\n.  \n\n\nrequire(devtools)\ninstall_github('rstats-lab/RSmartlyIO')\n\n\n\n\nSource: \nhttps://github.com/rstats-lab/RSmartlyIO", 
+            "text": "Installation\n\n\nThe package can be installed either from \ngithub\n or \nCRAN\n.\n\n\nGithub\n\n\nrequire(devtools)\ninstall_github('rstats-lab/RSmartlyIO')\n\n\n\n\nSource: \nhttps://github.com/rstats-lab/RSmartlyIO\n\n\nCRAN\n\n\ninstall.packages(\nRSmartlyIO\n)\n\n\n\n\nSource: \nhttps://cran.r-project.org/web/packages/RSmartlyIO/index.html", 
             "title": "Installation"
         }, 
         {
             "location": "/install/#installation", 
-            "text": "The package can be installed from  github .    require(devtools)\ninstall_github('rstats-lab/RSmartlyIO')  Source:  https://github.com/rstats-lab/RSmartlyIO", 
+            "text": "The package can be installed either from  github  or  CRAN .", 
             "title": "Installation"
+        }, 
+        {
+            "location": "/install/#github", 
+            "text": "require(devtools)\ninstall_github('rstats-lab/RSmartlyIO')  Source:  https://github.com/rstats-lab/RSmartlyIO", 
+            "title": "Github"
+        }, 
+        {
+            "location": "/install/#cran", 
+            "text": "install.packages( RSmartlyIO )  Source:  https://cran.r-project.org/web/packages/RSmartlyIO/index.html", 
+            "title": "CRAN"
         }, 
         {
             "location": "/requirements/", 
@@ -114,6 +124,26 @@
             "location": "/bug/#discovered-any-bugs", 
             "text": "Please make sure you run with the latest RSmartlyIO version before you report any issues.      Do you have a valid API token?    If you are still in trouble, please report the issue on  https://github.com/rstats-lab/RSmartlyIO/issues    We appreciate if you provide the following information along with the issue:   Operating System  R Version  RSmartlyIO version  the R code which leads to the error  the error message, prompt output  code as text rather than screenshots   We will try to get back to you as soon as possible!  Any other remarks, comments on the package or the documentation? \nWe appreciate any help in improving the package or documentation and look forward to your messages.", 
             "title": "Discovered any bugs?"
+        }, 
+        {
+            "location": "/dev/", 
+            "text": "Development\n\n\nThe development version of the package can be found at \ngithub\n. You are welcome to contribute!", 
+            "title": "Development"
+        }, 
+        {
+            "location": "/dev/#development", 
+            "text": "The development version of the package can be found at  github . You are welcome to contribute!", 
+            "title": "Development"
+        }, 
+        {
+            "location": "/author/", 
+            "text": "Package Author\n\n\nThe author and maintainer of RSmartlyIO is \n@jburkhardt\n. Feedback, code improvements and feature requests are warmly welcome!", 
+            "title": "Author"
+        }, 
+        {
+            "location": "/author/#package-author", 
+            "text": "The author and maintainer of RSmartlyIO is  @jburkhardt . Feedback, code improvements and feature requests are warmly welcome!", 
+            "title": "Package Author"
         }
     ]
 }
