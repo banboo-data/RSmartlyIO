@@ -6,7 +6,8 @@
 \usage{
 getSmartlyData(start, end, date = "date", accountID, accountInfo = F,
   campaignStructure = NULL, billing = NULL, targeting = NULL,
-  creative = NULL, facebook = NULL, apiToken, metrics)
+  creative = NULL, facebook = NULL, attribution = "28d", apiToken,
+  metrics)
 }
 \arguments{
 \item{start}{Beginning of date range. Format: "2016-05-01"}
@@ -28,6 +29,8 @@ getSmartlyData(start, end, date = "date", accountID, accountInfo = F,
 \item{creative}{Creative/Ad Characteristics. Vector with multiple arguments out of: creative_meta.call_to_action, creative_meta, creative_meta.type, creative_meta.post_type, creative_meta.name, creative_meta.picture, creative_meta.post_fb_id, creative_meta.post_fb_link, creative_meta.text, creative_meta.title, creative_meta.link, creative_meta.url_tags}
 
 \item{facebook}{Facebook Settings. One argument out of: age, country, gender, age_gender, placement, cross_device, region, hourly_stats_aggregated_by_advertiser_time_zone, hourly_stats_aggregated_by_audience_time_zone}
+
+\item{attribution}{Attribtuion Time Window, defaults to 28 days. One of: "1d","7d" or "28d".}
 
 \item{apiToken}{API Token. Character. Usually the API token is provided within the Smartly.io web interface or by the account manager.}
 

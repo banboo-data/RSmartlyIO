@@ -15,6 +15,7 @@
 #' @param facebook Facebook Settings. One argument out of: age, country, gender, age_gender, placement, cross_device, region, hourly_stats_aggregated_by_advertiser_time_zone, hourly_stats_aggregated_by_audience_time_zone
 #' @param apiToken API Token. Character. Usually the API token is provided within the Smartly.io web interface or by the account manager.
 #' @param metrics Metrics. Note: There are more metrics available. See the reporting section in the smartly.io interface. Vector with multiple argumets out of: impressions, ctr, cpm, cpc, spent, conversions, inline_link_clicks, clicks, cpa, reach, frequency, roi, revenue, social_impressions, social_clicks, website_clicks, newsfeed_clicks, deeplink_clicks, app_store_clicks, call_to_action_clicks, inline_post_engagement
+#' @param attribution Attribtuion Time Window, defaults to 28 days. One of: "1d","7d" or "28d".
 #' @export
 #' @return Dataframe
 #'
@@ -28,8 +29,14 @@ getSmartlyData <- function(start,
                             targeting = NULL, #vector (multiple): targeting.geo_locations.countries, targeting.geo_locations.cities, targeting.genders, targeting.age_min, targeting.age_max, targeting.interests, targeting.behaviors, targeting.custom_audiences, targeting.excluded_custom_audiences, targeting.connections, targeting.user_os, targeting.user_device, targeting.page_types
                             creative = NULL, #vector (multiple): creative_meta.call_to_action, creative_meta, creative_meta.type, creative_meta.post_type, creative_meta.name, creative_meta.picture, creative_meta.post_fb_id, creative_meta.post_fb_link, creative_meta.text, creative_meta.title, creative_meta.link, creative_meta.url_tags
                             facebook = NULL, #one of (single): age, country, gender, age_gender, placement, cross_device, region, hourly_stats_aggregated_by_advertiser_time_zone, hourly_stats_aggregated_by_audience_time_zone
+                            attribution = "28d",
                             apiToken,
                             metrics){
+        #attribution window
+        switch(attribution,
+               "1d" = attribution <- "%7B%22click%22%3A%221d_click%22%2C%22view%22%3Afalse%7D",
+               "7d" = attribution <- "%7B%22click%22%3A%227d_click%22%2C%22view%22%3Afalse%7D",
+               "28d" = attribution <- "%7B%22click%22%3A%2228d_click%22%2C%22view%22%3Afalse%7D")
         #build metrics query
         metrics <- paste(metrics, sep="", collapse="%2C")
         #build groupby query
@@ -73,7 +80,9 @@ getSmartlyData <- function(start,
                      start,
                      "%3A",
                      end,
-                     "&attribution=&metrics=",
+                     "&attribution=",
+                     attribution,
+                     "&metrics=",
                      metrics,
                      "&filters=%5B%5D&filter_type=%24and&groupby=",
                      groupby,

@@ -1,5 +1,7 @@
 ## RSmartlyIO
 
+RSmartlyIO is a license cost free open source project by [@jburkhardt](https://github.com/jburkhardt).
+
 ### Loading Facebook and Instagram Advertising Data from Smartly.io into R
 
 R Package which aims at loading **Facebook** and **Instagram** advertising data from [Smartly.io](https://app.smartly.io) into R.  
@@ -26,6 +28,7 @@ data <- getSmartlyData(start = "2016-03-01",
                        creative = c("creative_meta.call_to_action"),
                        #facebook = "age",
                        apiToken="************************************",
+                       attribtuion = "28d",
                        metrics = c("impressions","clicks"))
 ```
 
