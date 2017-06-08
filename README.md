@@ -10,13 +10,13 @@ The package offers an interface to query the Smartly.io API and loads data direc
 
 ### Installation
 
-```
+```R
 require(devtools)
 install_github('rstats-lab/RSmartlyIO')
 ```
 
 ### Usage
-```
+```R
 data <- getSmartlyData(start = "2016-03-01",
                        end = "2016-03-02",
                        date = "date",
