@@ -15,5 +15,5 @@ Imports:
 License: MIT + file LICENSE
 URL: https://github.com/rstats-lab/RSmartlyIO, https://app.smartly.io
 BugReports: https://github.com/rstats-lab/RSmartlyIO/issues
-Date: 2017-01-09
+Date: 2017-06-08
 RoxygenNote: 5.0.1
