@@ -1,6 +1,10 @@
-## RSmartlyIO
+RSmartlyIO
+========================================================
 
-RSmartlyIO is a license cost free open source project by [@jburkhardt](https://github.com/jburkhardt) and [@mbannert](https://github.com/mbannert).
+[![RSmartlyIO Cran Release](https://www.r-pkg.org/badges/version-last-release/RSmartlyIO)](https://cran.rstudio.com/web/packages/RSmartlyIO/index.html) [![RSmartlyIO Cran Downloads](https://cranlogs.r-pkg.org/badges/grand-total/RSmartlyIO)](https://cran.rstudio.com/web/packages/RSmartlyIO/index.html)
+
+
+RSmartlyIO is a license cost free open source project by [@jburkhardt](https://github.com/jburkhardt).
 
 ### Loading Facebook and Instagram Advertising Data from Smartly.io into R
 
@@ -9,6 +13,14 @@ Smartly.io is an online advertising service that enables advertisers to display 
 The package offers an interface to query the Smartly.io API and loads data directly into R for further data processing and data analysis.
 
 ### Installation
+
+The package can b isntalled from CRAN
+
+```R
+install.packages("RSmartlyIO")
+```
+
+or directly from this Github repository with:
 
 ```R
 require(devtools)
