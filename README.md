@@ -14,7 +14,7 @@ The package offers an interface to query the Smartly.io API and loads data direc
 
 ### Installation
 
-The package can b isntalled from CRAN
+The package can be installed from CRAN
 
 ```R
 install.packages("RSmartlyIO")
