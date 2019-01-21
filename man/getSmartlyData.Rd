@@ -10,9 +10,9 @@ getSmartlyData(start, end, date = "date", accountID, accountInfo = F,
   metrics)
 }
 \arguments{
-\item{start}{Beginning of date range. Format: "2016-05-01"}
+\item{start}{Beginning of date range. Format: "2019-01-01"}
 
-\item{end}{End of date range. Format: "2016-05-02"}
+\item{end}{End of date range. Format: "2019-01-10"}
 
 \item{date}{Date aggregation level. One out of date, year, month, weekofyear, weekday}
 
@@ -43,4 +43,3 @@ Dataframe
 getSmartlyData posts the query and downloads the data.
 The data are retrieved from the API as a dataframe.
 }
-

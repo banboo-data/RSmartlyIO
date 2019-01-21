@@ -29,8 +29,8 @@ install_github('rstats-lab/RSmartlyIO')
 
 ### Usage
 ```R
-data <- getSmartlyData(start = "2016-03-01",
-                       end = "2016-03-02",
+data <- getSmartlyData(start = "2019-01-01",
+                       end = "2019-01-10",
                        date = "date",
                        accountID="*****************",
                        accountInfo = F,

@@ -3,8 +3,8 @@
 #' @description getSmartlyData posts the query and downloads the data.
 #' The data are retrieved from the API as a dataframe.
 #'
-#' @param start Beginning of date range. Format: "2016-05-01"
-#' @param end End of date range. Format: "2016-05-02"
+#' @param start Beginning of date range. Format: "2019-01-01"
+#' @param end End of date range. Format: "2019-01-10"
 #' @param date Date aggregation level. One out of date, year, month, weekofyear, weekday
 #' @param accountID Smartly.io Account ID. Input as character: "1234abcdefg5678"
 #' @param accountInfo Account Information. TRUE/FALSE
@@ -74,7 +74,7 @@ getSmartlyData <- function(start,
         }
         groupby <- paste(groupby, "&meta=account_id%2Ccampaign_id", sep="")
         #build url
-        url <- paste("https://stats-api.smartly.io/api/v1.0/stats?account_id=",#old url: "https://api.smartly.io/v1.0/stats?account_id=",
+        url <- paste("https://stats-api.smartly.io/api/v1.2/stats?account_id=",#old url: "https://api.smartly.io/v1.0/stats?account_id=",
                      accountID,
                      "&stats=",
                      start,
